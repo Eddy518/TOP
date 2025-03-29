@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@600&family=Roboto:ital,wght@1,500&display=swap");
+@font-face {
+  /* * ADD CUSTOM FONT*/
+  font-family: "Chameron";
+  src: url("assets/fonts/Chameron\ .ttf");
+}
+:root {
+  --primary-clr: saddlebrown;
+  --secondary-clr: #504324;
+  --hover-clr: burlywood;
+  --black-clr: #000;
+  --btn-bg-clr: rgba(173, 135, 102, 0.025);
+  --btn-shdw-hov: rgb(96, 52, 36);
+  --btn-bg-hov: rgba(96, 52, 36, 0.383);
+  --footer-clr: #d0adf0;
+}
+h1 {
+  font-family: "Chameron", Verdana, sans-serif;
+}
+* {
+  box-sizing: border-box;
+  color-scheme: dark;
+  margin: 0;
+  padding: 0;
+}
+.grid-container {
+  outline: 2px solid var(--secondary-clr);
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid {
+  border-radius: 50%;
+}
+.grid-outline {
+  outline: 1px solid var(--black-clr);
+}
+.pixel {
+  background-color: var(--black-clr);
+}
+button {
+  padding: 10px 14px;
+  background-color: var(--btn-bg-clr);
+  color: var(--primary-clr);
+  border: none;
+  font-size: 22px;
+  font-family: "Handjet", cursive;
+  font-weight: bold;
+}
+button:hover:not(.color-picker, .grid-slider-btn) {
+  /* * IGNORE COLORPICKER AND GRIDSLIDER BUTTON  */
+  cursor: pointer;
+  background-color: var(--btn-bg-hov);
+  color: var(--hover-clr);
+  box-shadow: 2px 2px 4px var(--btn-shdw-hov);
+}
+.nav {
+  color: var(--primary-clr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.main-content {
+  display: flex;
+  gap: 70px;
+  padding: 40px;
+  justify-content: center;
+}
+/* DEBUGGING */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.nav {
+  padding: 27px;
+}
+input[type="range" i] {
+  accent-color: var(--primary-clr);
+}
+
+.footer {
+  display: flex;
+  gap: 12px;
+  align-self: center;
+  position: fixed;
+  bottom: 0;
+  padding: 14px;
+}
+.footer-docs,
+.footer-github {
+  text-decoration: none;
+  list-style: none;
+}
+.footer-docs,
+.footer-divider {
+  font-size: 18px;
+}
+.footer-docs {
+  color: var(--footer-clr);
+}
+.footer-divider {
+  font-size: bolder;
+  color: var(--secondary-clr);
+}
+#github-spinner {
+  transition: 0.7s; /* * Fix rotate 360 deg not working */
+}
+#github-spinner:hover {
+  transform: rotate(360deg);
+}

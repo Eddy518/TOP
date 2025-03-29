@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <h1>SCRIBBLE SKETCH</h1>
+      </div>
+      <div class="main-content">
+        <div class="btn-section">
+          <button id="reset-btn">Reset</button>
+          <button id="clear-btn">Clear</button>
+          <button id="outline-boxes-btn">Show / Hide boxes</button>
+          <button id="eraser-btn">Eraser</button>
+          <button class="color-picker">
+            <!--* DISABLE COLOR PICKER BUTTON-->
+            <p>Color</p>
+            <input type="color" value="#5912af" id="color-picker" />
+          </button>
+          <button id="multi-color-btn">Multi color mode</button>
+          <button id="rainbow-colors-btn">Rainbow mode</button>
+          <button id="fill-random-color-btn">Fill Random color mode</button>
+          <button id="default-color-btn">Default color</button>
+          <button class="grid-slider-btn">
+            <p>Grid size : <span id="grid-size-value"></span></p>
+            <input type="range" id="grid-slider" min="1" max="100" value="16" />
+          </button>
+        </div>
+        <div class="wrapper">
+          <div id="grid-container" class="grid-container"></div>
+        </div>
+      </div>
+      <div class="footer">
+        <a
+          class="footer-docs"
+          href="https://github.com/Eddy518/etch-a-sketch#features"
+          >how to play</a
+        >
+        <span class="footer-divider"> | </span>
+        <a class="footer-github" href="https://github.com/Eddy518/etch-a-sketch"
+          ><i class="fa-brands fa-github fa-lg" id="github-spinner"></i
+        ></a>
+      </div>
+    </div>
+  </body>
+</html>

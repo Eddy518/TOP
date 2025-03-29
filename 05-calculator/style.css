@@ -1,0 +1,173 @@
+@font-face {
+  font-family: "regista";
+  src: url("assets/fonts/regista/Regista.ttf");
+}
+@font-face {
+  font-family: "brothersideSignature";
+  src: url("assets/fonts/brothersideSignature/BrothersideSignature-w13o6.otf")
+    format("opentype");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-bkg-clr);
+}
+* :where(.calc-icon, .btn, .calc-btn-wrapper, .calc-row, pre, .footer) {
+  user-select: none;
+}
+:root {
+  --primary-clr: rgb(142, 156, 39);
+  --primary-bkg-clr: #52453c;
+  --calc-display-clr: rgb(147, 17, 17);
+}
+pre {
+  font-weight: lighter;
+  font-size: 10px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 75vh;
+  align-items: center;
+}
+.calc-wrapper {
+  width: 390px;
+  height: 550px;
+  padding: 12px;
+  border: 6px solid var(--primary-clr);
+  border-radius: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.calc-icon {
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  font-size: 23px;
+  font-weight: bolder;
+  text-decoration: underline;
+  color: var(--primary-clr);
+  font-family: "regista", Arial, sans-serif;
+}
+.calc-display {
+  overflow: hidden;
+  height: 65px;
+  border-radius: 6px;
+  font-family: "Calculator", Arial, sans-serif;
+  color: var(--calc-display-clr);
+  background-color: #786559;
+  border: 2px solid lightgrey;
+  font-size: 50px;
+  padding-right: 5px;
+  /* * SWITCH CALCULATOR NUMBERS TO THE RIGHT */
+  display: flex;
+  flex-direction: row-reverse;
+}
+.calc-btn-wrapper {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.calc-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.btn-number,
+.btn-percentage,
+.btn-decimal {
+  background-color: rgb(82, 13, 82);
+}
+.btn-number:hover,
+.btn-percentage:hover,
+.btn-decimal:hover {
+  background-color: rgba(128, 0, 128, 0.403);
+}
+.btn-operator,
+.btn-exponent {
+  background-color: #913516;
+}
+.btn-operator:hover,
+.btn-exponent:hover {
+  background-color: #91351691;
+}
+.btn-clear,
+.btn-all-clear {
+  background-color: rgb(104, 13, 13);
+}
+.btn-all-clear:hover,
+.btn-clear:hover {
+  background-color: rgba(104, 13, 13, 0.649);
+}
+.btn-equals {
+  background-color: #590912;
+}
+.btn-equals:hover {
+  background-color: #5b0610ba;
+}
+.calc-row > * {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0s background-color;
+}
+.calc-row > *:hover {
+  cursor: pointer;
+  transition-delay: 10ms;
+}
+.calc-footer {
+  border: 2px dotted #331c0c;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.calc-display {
+  font-weight: 500;
+}
+.calc-btn-wrapper {
+  font-size: 19px;
+}
+.github-icon {
+  color: var(--primary-clr);
+}
+.github-icon:hover {
+  color: #590912;
+  transition: 2.5s;
+  transform: rotateY(180deg);
+}
+.btn {
+  color: cornsilk;
+}
+sup {
+  background: none;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  line-height: 1.4;
+  font-weight: lighter;
+  padding-bottom: 8px;
+}
+.name {
+  font-family: "brotherside-signature", Arial, sans-serif;
+  color: var(--primary-clr);
+  background-color: #590912;
+  padding: 2px;
+  border-radius: 12px;
+}
+.keyboard-shortcuts {
+  color: var(--primary-clr);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary-clr);
+  line-height: 1.9;
+}
